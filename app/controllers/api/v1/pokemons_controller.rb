@@ -1,4 +1,5 @@
 class Api::V1::PokemonsController < ApplicationController
+    before_action :set_pokemon, only: [:show, :update, :destroy]
 
     def index
         @pokemons = Pokemon.all
