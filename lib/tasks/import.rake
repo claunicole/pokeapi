@@ -16,7 +16,7 @@ namespace :import do
 
             detail_data = JSON.parse(detail_response.body)
 
-            Pokemon.create(
+            new_pokemon = Pokemon.create(
                 name: detail_data['name'],
                 order: detail_data['order'],
                 base_experience: detail_data['base_experience'],
@@ -24,6 +24,12 @@ namespace :import do
                 weight: detail_data['weight'],
           )
 
+          detail_data['types'].each do |type_entry|
+            type_name = type_entry['type']['name']
+            slot = type_entry['slot'] 
+            type = Type.find_or_create_by!(name: type_name)
+            new_pokemon.pokemon_types.create!(type: type, slot: slot)
+          end
         end     
     end
   end
