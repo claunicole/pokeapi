@@ -2,6 +2,8 @@ require "test_helper"
 
 
 class Api::V1::PokemonsControllerTest < ActionDispatch::IntegrationTest
+
+  #TEST FOR POKEMON CRUD
   
   test 'valid_pokemon' do
     type = Type.create(name: 'grass')

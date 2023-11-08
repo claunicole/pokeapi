@@ -1,4 +1,5 @@
 class Pokemon < ApplicationRecord
+    #MODEL POKEMON, ASSOCIATED WITH TYPES AND VALIDATIONS
     validates :name, presence: true, uniqueness: true
     validates :order, presence: true, uniqueness: true
 
