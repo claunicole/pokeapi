@@ -1,4 +1,5 @@
 class PokemonType < ApplicationRecord
+  #INTERMEDIATE MODEL FOR RELATIONS BETWEEN POKEMON AND TYPE
   belongs_to :pokemon
   belongs_to :type
 

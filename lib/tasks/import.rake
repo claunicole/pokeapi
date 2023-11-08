@@ -2,6 +2,8 @@ require 'json'
 require 'net/http'
 require 'uri'
 
+#RAKE TASK TO IMPORT DATA FROM POKEAPI 
+
 namespace :import do
     desc "Import data from PokeApi"
     task import_pokemon: :environment do 

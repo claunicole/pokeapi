@@ -1,6 +1,7 @@
 class Api::V1::TypesController < ApplicationController
 
     before_action :set_type, only: [:show, :update, :destroy]
+    #CRUD TYPES
     
     def index
         @types = Type.all
