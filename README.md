@@ -18,7 +18,7 @@ Up and Running:
 2. Run the command `bundle install`
 3. Create the database with `rails db:create`
 4. Run the migrations `rails db:migrate`
-5. Seed the dabase `brake import:import_pokemon`
+5. Seed the dabase `rake import:import_pokemon`
 
 
 # API Docs
