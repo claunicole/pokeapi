@@ -14,7 +14,8 @@ class Api::V1::TypesController < ApplicationController
       def create
         @type = Type.new(type_params)
         if @type.save
-          render json: @type, status: :created
+            render json: { message: 'Congratulations the Type has been created successfully', type: @type },
+            status: :ok
         else
           render json: @type.errors, status: :unprocessable_entity
         end
@@ -22,7 +23,8 @@ class Api::V1::TypesController < ApplicationController
     
       def update
         if @type.update(type_params)
-          render json: @type
+            render json: { message: 'Congratulations the Type has been updated successfully', type: @type },
+            status: :ok
         else
           render json: @type.errors, status: :unprocessable_entity
         end

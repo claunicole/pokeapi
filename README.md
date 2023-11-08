@@ -1,24 +1,28 @@
-# README
+# Poke API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Content
 
-Things you may want to cover:
+- [Installation](#installation)
+- [Documentation](#api-docs)
 
-* Ruby version
+# Installation
 
-* System dependencies
+- Ruby version: 3.2.2
+- Rails version: 7.1.1
 
-* Configuration
+- Database: SQLite
 
-* Database creation
 
-* Database initialization
+Up and Running:
+1. Clone this repository 
+2. Run the command `bundle install`
+3. Create the database with `rails db:create`
+4. Run the migrations `rails db:migrate`
+5. Seed the dabase `brake import:import_pokemon`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# API Docs
 
-* Deployment instructions
+## api/v1 
 
-* ...
+### For the documentation please visit [Documentation](https://bevel-mars-3f9.notion.site/Documentation-PokeAPI-ebeaa340a3bd4bf0808baf9e521fc67b?pvs=4)

@@ -30,7 +30,7 @@ class Api::V1::PokemonsController < ApplicationController
     end
 
     def show
-        render json: @pokemon.as_json(include: { pokemon_types: { include: { type: { only: :name } }, only: :slot } })
+        render json: @pokemon.as_json(include: { pokemon_types: { include: { type: { only: :name } }, only: [:id, :slot] } })
     end
 
     def edit
